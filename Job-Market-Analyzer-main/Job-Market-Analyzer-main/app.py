@@ -1,3 +1,4 @@
+from pathlib import Path
 import pandas as pd
 import streamlit as st
 import plotly.express as px
@@ -31,7 +32,7 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 """, unsafe_allow_html=True)
 
 # load data
-df = pd.read_csv('Cleaned_DS_jobs.csv')
+df = pd.read_csv(Path(__file__).parent / 'Cleaned_DS_Jobs.csv')
 
 
 
