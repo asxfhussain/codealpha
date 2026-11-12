@@ -1,8 +1,9 @@
+from pathlib import Path
 import pandas as pd
 import streamlit as st
 import plotly.express as px
 
-df = pd.read_csv('zomato_clean.csv')
+df = pd.read_csv(Path(__file__).parent / 'zomato_clean.csv')
 
 # cleaning
 df['rate'] = df['rate'].astype(str).str.replace('/5', '').str.strip()
